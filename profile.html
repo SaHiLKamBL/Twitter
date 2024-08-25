@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 1.00);
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            width: 100vw;
+            min-height: 100vh;
+        }
+
+        .list {
+            width: 398.9px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid rgb(47, 51, 54);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .com {
+            width: 50.4px;
+            min-height: 50.4px;
+        }
+
+        .home {
+            color: #fff;
+            width: 243.8px;
+            height: 50.25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: rgb(29, 155, 240);
+            border-radius: 40px;
+            width: 219.41px;
+            height: 52px;
+            font-size: large;
+        }
+
+        svg {
+            width: 6vh;
+            height: 7vh;
+        }
+
+        .prof {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: #fff;
+        }
+
+        .icon {
+            background-color: #fff;
+            width: 5vw;
+            height: 7.5vh;
+            border: 3px solid rgb(29, 155, 240);
+            border-radius: 70px;
+            background-image: url(profile.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 5px;
+        }
+
+        .content {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+        }
+
+        .dots {
+            width: 4vw;
+            display: flex;
+            justify-content: end;
+            align-items: start;
+        }
+
+        .posts {
+            width: 600px;
+            margin-left: 26vw;
+            border-right: 1px solid rgb(47, 51, 54);
+        }
+
+        .top {
+            width: 600px;
+            min-height: 6vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgb(47, 51, 54);
+            position: fixed;
+            top: 0;
+            left: 5;
+            background-color:transparent;
+            backdrop-filter: blur(20px);
+            z-index: 1;
+           
+        } 
+
+      .head{
+       width: 600px;
+        min-height: 6vh;
+        color: #fff;
+          display: flex;
+        align-items: center;
+         padding-left: 10px;
+            border-left: 1px solid rgb(47, 51, 54);
+
+        }
+        
+
+        .b:hover {
+            background-color: rgb(47, 51, 54);
+        }
+
+        .container {
+            padding-top: 10px;
+            padding-left: 10px;
+            width:590px;
+            margin-top: 10vh;
+            display: flex;
+            align-items: start;
+            border-bottom: 1px solid rgb(47, 51, 54);
+            height: 50vh;
+          
+        }
+
+        .contt {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            
+        }
+
+        .pos {
+            width: 500.8px;
+            height: 280.2px;
+            background-color: rgb(175, 181, 183);
+            border-radius: 25px;
+            border: 1px solid rgb(47, 51, 54);
+        }
+
+        .social {
+            width: 500.4px;
+            height: 18px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .search {
+            width: 500px;
+            height: 80vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 10px;
+            z-index: 2; 
+        }
+
+        .find {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+
+        .find input {
+            width: 250px;
+            height: 8vh;
+            background-color: rgb(47, 51, 54);
+            border-radius: 40px;
+            border: none;
+            padding: 0 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .find input::placeholder {
+            color: rgb(108, 111, 112);
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .premium{
+            width: 350px;
+            height: 200px;
+            border-radius: 15px;
+            border: 1px solid rgb(47, 51, 54);
+            padding: 10px;
+        }
+        .profo{
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+         
+        }
+        .logo{
+            background-color: #fff;
+            width: 125.5px;
+            height: 125.5px;
+            border: 3px solid rgb(29, 155, 240);
+            border-radius: 70px;
+            background-image: url(image/profile.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+        .date{
+              width: 65%;
+             min-height: 6vh;
+             color: #fff;
+                 display: flex;
+              align-items: center;
+        }
+        .follow{
+            width: 65%;
+            height: 20px;
+            display: flex;
+            align-items: center;
+
+        }
+        .edi{
+        
+            height: 48vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 30%;
+            padding-top: 15px;
+        }
+        .profedit{
+
+            border-radius: 40px;
+            border: 3px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8vw;
+            height: 5vh;
+            margin-right: 5px;
+        }
+        .po{
+            padding-top: 2px;
+            width: 65%;
+            height: 9.2vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+         
+         
+        }
+        .epo{
+            width: 15vw;
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+
+        }
+        .po:hover,.epo:hover{
+           
+            border-bottom:4px solid rgb(10, 127, 244);
+        }
+        .logout{
+            width: 220.8px;
+            height: 45.25px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #fff;
+            border-radius: 40px;
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="list">
+            <div class="com">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="#fff"></path>
+                    <g></g>
+                  </svg>
+                  
+            </div>
+            <br>
+            <br>
+            <div class="home">
+                <div class="com">
+                    <svg  viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                        <g>
+                          <path d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913h6.638c.511 0 .929-.41.929-.913v-7.075h3.008v7.075c0 .502.418.913.929.913h6.639c.51 0 .928-.41.928-.913V7.904c0-.301-.158-.584-.408-.758zM20 20l-4.5.01.011-7.097c0-.502-.418-.913-.928-.913H9.44c-.511 0-.929.41-.929.913L8.5 20H4V8.773l8.011-5.342L20 8.764z" fill="#fff"></path>
+                        </g>
+                      </svg>
+                      
+                      
+                </div>
+                <span style="font-size: 28px;font-weight: 400;  margin-left: 10px;"><a style="text-decoration: none;color: inherit;" href="index.html">Home</a></span>
+            </div>
+
+            <div class="home" style="margin-left :20px;">
+                <div class="com">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                        <g>
+                          <path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z" fill="#fff"></path>
+                        </g>
+                      </svg>
+                      
+                </div>
+                    <span style="font-size: 28px;font-weight: 400;  margin-left: 10px;">Explore</span>
+            </div>
+
+            <div class="home">
+                <div class="com">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                        <g>
+                          <path d="M5.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C15.318 13.65 13.838 13 12 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zM12 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM8 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4z" fill="#fff"></path>
+                        </g>
+                      </svg>
+                    </div>   
+                    <span style="font-size: 28px;font-weight: 400;  margin-left: 10px;"><a style="text-decoration: none;color: inherit;" href="profile.html">Profile</a></span>
+            </div>
+
+            <br>
+            <br>
+            <div class="home">
+                <div class="button">
+                    <h3>Post</h3>
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+            <div class="home">
+             <div class="prof">
+                <div class="icon"></div>
+                  <div class="content">
+                    <h3 style="margin: 0%;">SahilKambe1205</h3>
+                    <h4 style="margin: 0%;color: rgb(108, 111, 112);"><span style="color: rgb(29, 155, 240);">@</span>sahil_kamble_05</h5>
+                  </div>
+                 <div class="dots">
+                    <img src="image/more.png" alt="icon">
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="logout">
+                <h2>Logout</h2>
+            </div>
+           
+        </div>
+        <div class="posts">
+            <div class="top">
+                <div class="head">
+                    <img style="width: 2vw;height: 4vh;" src="image/icons8-left-arrow-50.png" alt="arrow">
+                    <h2 style="margin-left: 10px;">Sahil kamble</h2>
+                </div>
+                
+            </div>
+
+            <div class="container">
+                  <div class="profo">
+                    <div class="logo"></div>
+                    <div class="content">
+                        <h3 style="margin: 0%;">SahilKambe1205</h3>
+                        <h4 style="margin: 0%;color: rgb(108, 111, 112);"><span style="color: rgb(29, 155, 240);">@</span>sahil_kamble_05</h5>
+                    </div>
+                    <div class="date">
+                        <img style="width: 2vw;height: 4vh;" src="image/icons8-calendar-32.png" alt="arrow">
+                        <h3 style="margin-left: 10px;color: rgb(108, 111, 112);"> Joined August2024</h3>
+                    </div>
+                    <div class="follow">
+                        <h3 style="margin-right: 10px;color: rgb(108, 111, 112);"><span style="margin-right: 3px;color: #fff;">2</span>Following</h3>
+                        <h3 style="color: rgb(108, 111, 112);"><span  style="margin-right: 3px;color: #fff;">5</span>Follower</h3>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="po">
+                        <h3>Post</h3>
+                    </div>
+                  </div>
+
+                  <div class="edi">
+                    <div class="profedit">
+                        <h3>Edit Profile</h3>
+                    </div>
+                
+                    <div class="epo">
+                        <h3>Media</h3>
+                    </div>
+                  </div>
+          
+                
+             </div>
+
+
+        </div>
+        <div class="search">
+              <div class="find">
+                  <input type="text" placeholder="search.. " ><span style="margin-left: 5px;"><img style="width: 3vw;height: 5vh;" src="image/icons8-search-50.png" alt="search"></span>
+              </div>
+              <br>
+              <div class="premium">
+                <h2>Subscribe to Premium</h2>
+                <p style="margin-bottom: 0%;font-size: 20px;">Subscribe to unlock new features and </p> 
+                <p style="margin-top: 0%;font-size: 20px;">if eligible,receive share of ads revenue.</p>
+                <div class="button" style="width: 200px;height: 45px;">
+                    <h3>Subscribe</h3>
+                </div>
+
+              </div>
+        </div>
+
+    </div>
+    <script src="indexprof.js"></script>
+    <script src="indexmain.js"></script>
+</body>
+</html>

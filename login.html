@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(22, 21, 21);
+            color: #fff;
+        }
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+       
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2vh;
+            position: relative;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1a1a1a;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .box {
+            width: 350px;
+            padding: 20px;
+            padding-top: 60px; 
+            border-radius: 20px;
+            background-color: #1a1a1a;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        .text {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .text p {
+            font-weight: 800;
+            font-size: 30px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #555;
+            background-color: #333;
+            color: #fff;
+            outline: none;
+        }
+        .input-group span {
+            position: absolute;
+            right: 10px;
+            color: #999;
+        }
+        .div3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .div3 input {
+            margin-right: 5px;
+        }
+        .div3 p {
+            margin: 0;
+            cursor: pointer;
+        }
+        .button {
+            width: 95%;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(12, 125, 238);
+            color: #fff;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .register {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .register span {
+            cursor: pointer;
+            color: rgb(12, 125, 238);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <img class="icon" src="image/icons8-twitterx-50.png" alt="icon">
+            <div class="box">
+                <div class="text">
+                    <p>Login</p>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" placeholder="Email">
+                    <span class="material-symbols-outlined">mail</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" placeholder="Password">
+                    <span class="material-symbols-outlined">lock</span>
+                </div>
+
+                <div class="div3">
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+                    <p>Forget password?</p>
+                </div>
+
+                <div class="button">
+                    Login
+                </div>
+
+                <div class="register">
+                    <p>Don't have an account? <span>Register</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="indexmain.js"></script>
+</body>
+</html>

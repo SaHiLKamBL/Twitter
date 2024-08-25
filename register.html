@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(22, 21, 21);
+            color: #fff;
+        }
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2vh;
+        }
+        .icon {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1a1a1a;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .box {
+            width: 350px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #1a1a1a;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+        .div1 {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .back {
+            background-color: black;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .text {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .text p {
+            font-weight: 800;
+            font-size: 30px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #555;
+            background-color: #333;
+            color: #fff;
+            outline: none;
+        }
+        .input-group span {
+            position: absolute;
+            right: 10px;
+            color: #999;
+        }
+        .button {
+            width: 95%;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(12, 125, 238);
+            color: #fff;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .login {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .login span {
+            cursor: pointer;
+            color: rgb(12, 125, 238);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+
+        <div class="container">
+            <img class="icon" src="image/icons8-twitterx-50.png" alt="icon">
+            <div class="box">
+
+                <div class="text">
+                    <p>Register</p>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" placeholder="Full Name">
+                    <span class="material">person</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" placeholder="Email">
+                    <span class="material">mail</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" placeholder="Password">
+                    <span class="material">lock</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" placeholder="Confirm Password">
+                    <span class="material">lock</span>
+                </div>
+
+                <div class="button">
+                    Register
+                </div>
+
+                <div class="login">
+                    <p>Already have an account? <span>Login</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="reg.js"></script>
+    <script src="indexmain.js"></script>
+</body>
+</html>
